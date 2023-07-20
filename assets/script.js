@@ -56,6 +56,18 @@ function createDots() {
 createDots();
 
 
+// AFFICHAGE DU DOT ACTIF //
+
+let activeSlide = 0;
+
+function activeDot() {
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot) => dot.classList.remove('dot_selected'));
+  dots[activeSlide].classList.add('dot_selected');
+}
+
+activeDot();
+
 
 
 
