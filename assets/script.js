@@ -39,6 +39,23 @@ nextArrow.addEventListener('click', () => {
 });
 
 
+// CALCUL DU NOMBRE DE SLIDES ET AJOUT DES DOTS //
+
+const numberOfSlides = slides.length;
+const dotsContainer = document.querySelector('.dots');
+
+// Fonction pour créer les dots
+function createDots() {
+  for (let i = 0; i < numberOfSlides; i++) {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    dotsContainer.appendChild(dot);
+  }
+}
+
+createDots();
+
+
 
 
 
