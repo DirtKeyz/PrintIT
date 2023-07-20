@@ -18,18 +18,28 @@ const slides = [
 ]
 
 
-// EVENTS LISTENER
+
+
+// EVENTS LISTENER //
 
 const previousArrow = document.querySelector('.arrow_left');
 const nextArrow = document.querySelector('.arrow_right');
 
 
 previousArrow.addEventListener('click', () => {
+	activeSlide = (activeSlide - 1 + numberOfSlides) % numberOfSlides;
 	console.log('ceci est un clic sur la flèche gauche')
-
+	activeDot();
 });
 
 nextArrow.addEventListener('click', () => {
+	activeSlide = (activeSlide + 1) % numberOfSlides;
 	console.log('ceci est un clic sur la flèche droite')
-
+	activeDot();
 });
+
+
+
+
+
+
