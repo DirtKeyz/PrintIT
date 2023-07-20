@@ -24,16 +24,19 @@ const slides = [
 
 const previousArrow = document.querySelector('.arrow_left');
 const nextArrow = document.querySelector('.arrow_right');
+const bannerImage = document.querySelector('.banner-img');
 
 
 previousArrow.addEventListener('click', () => {
 	activeSlide = (activeSlide - 1 + numberOfSlides) % numberOfSlides;
+	bannerImage.src = `./assets/images/slideshow/${slides[activeSlide].image}`;
 	console.log('ceci est un clic sur la flèche gauche')
 	activeDot();
 });
 
 nextArrow.addEventListener('click', () => {
 	activeSlide = (activeSlide + 1) % numberOfSlides;
+	bannerImage.src = `./assets/images/slideshow/${slides[activeSlide].image}`;
 	console.log('ceci est un clic sur la flèche droite')
 	activeDot();
 });
@@ -67,7 +70,6 @@ function activeDot() {
 }
 
 activeDot();
-
 
 
 
